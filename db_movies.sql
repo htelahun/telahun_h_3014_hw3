@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 22, 2018 at 05:16 AM
+-- Generation Time: Apr 23, 2018 at 12:48 PM
 -- Server version: 5.6.35
 -- PHP Version: 7.1.8
 
@@ -35,15 +35,19 @@ CREATE TABLE `tbl_user` (
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_level` varchar(300) NOT NULL,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `user_attempts` int(10) NOT NULL
+  `user_attempts` int(10) NOT NULL,
+  `user_edit` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_level`, `user_ip`, `user_attempts`) VALUES
-(1, 'hana', 'hana', '123', 'hana@gmail.com', '2018-04-22 03:14:42', '', '::1', 0);
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_level`, `user_ip`, `user_attempts`, `user_edit`) VALUES
+(1, 'hana', 'hana', '123', 'hana@gmail.com', '2018-04-22 21:25:06', '', '::1', 0, NULL),
+(12, 'bbo', 'bg', 'bgd', 'bd', '2018-04-22 05:21:23', '2', 'no', 0, NULL),
+(13, 'hsdjf', 'bhbd', '580346217', 'bdjs', '2018-04-22 05:21:50', '1', 'no', 0, NULL),
+(14, 'HANA', 'BOB', '197068435', 'JNADJ', '2018-04-22 21:51:18', '1', 'no', 0, '2018-04-22 17:52:01');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +67,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
